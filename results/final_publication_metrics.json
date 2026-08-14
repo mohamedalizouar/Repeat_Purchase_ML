@@ -1,0 +1,167 @@
+{
+  "scope": "retrospective observed-repeat-status ranking",
+  "validation": "five-fold outer nested cross-validation; three-fold inner model selection and maximum-F1 threshold selection",
+  "primary_nested_results": {
+    "customers": 93358,
+    "positives": 2801,
+    "prevalence": 0.03000278497825575,
+    "accuracy": 0.9874354634846505,
+    "average_precision": 0.7397291352623296,
+    "roc_auc": 0.9377642431342946,
+    "precision": 0.9094567404426559,
+    "recall": 0.6454837558014994,
+    "f1": 0.7550636876174567,
+    "lift_at_10_percent": 7.964841865449571,
+    "tn": 90377,
+    "fp": 180,
+    "fn": 993,
+    "tp": 1808,
+    "analysis": "main_retrospective",
+    "feature_count": 12,
+    "features": [
+      "avg_review_score",
+      "avg_delivery_days",
+      "late_delivery_rate",
+      "monetary",
+      "recency_days",
+      "avg_items",
+      "avg_installments",
+      "max_installments",
+      "credit_share",
+      "boleto_share",
+      "review_coverage",
+      "delivery_coverage"
+    ],
+    "mean_outer_average_precision": 0.7399764916360702,
+    "mean_outer_roc_auc": 0.9377600410223682,
+    "mean_outer_lift_at_10_percent": 7.961309445765847,
+    "fold_thresholds": [
+      0.8036948742261925,
+      0.807484332371167,
+      0.7877852344610322,
+      0.7883153115022278,
+      0.7814392710798802
+    ],
+    "selected_models": [
+      "Histogram Gradient Boosting",
+      "Histogram Gradient Boosting",
+      "Histogram Gradient Boosting",
+      "Histogram Gradient Boosting",
+      "Histogram Gradient Boosting"
+    ],
+    "bootstrap_95_ci": {
+      "accuracy": {
+        "lower_95": 0.9867815291672914,
+        "upper_95": 0.988088862229268
+      },
+      "average_precision": {
+        "lower_95": 0.7239604409966234,
+        "upper_95": 0.7551045471891565
+      },
+      "roc_auc": {
+        "lower_95": 0.9324158913294108,
+        "upper_95": 0.9428876378538965
+      },
+      "precision": {
+        "lower_95": 0.8981195774455827,
+        "upper_95": 0.9224091216979002
+      },
+      "recall": {
+        "lower_95": 0.6254194930382007,
+        "upper_95": 0.6626204926811853
+      },
+      "f1": {
+        "lower_95": 0.7405231203335289,
+        "upper_95": 0.7693606837519378
+      },
+      "lift_at_10_percent": {
+        "lower_95": 7.820164493599574,
+        "upper_95": 8.109519237299567
+      }
+    }
+  },
+  "proxy_resistant_sensitivity_results": {
+    "customers": 93358,
+    "positives": 2801,
+    "prevalence": 0.03000278497825575,
+    "accuracy": 0.9851217892414148,
+    "average_precision": 0.6533761509303528,
+    "roc_auc": 0.8611602810874665,
+    "precision": 0.8665628245067497,
+    "recall": 0.5958586219207426,
+    "f1": 0.7061561243917919,
+    "lift_at_10_percent": 6.9116691400763655,
+    "tn": 90300,
+    "fp": 257,
+    "fn": 1132,
+    "tp": 1669,
+    "analysis": "proxy_resistant_sensitivity",
+    "feature_count": 11,
+    "features": [
+      "avg_review_score",
+      "avg_delivery_days",
+      "late_delivery_rate",
+      "avg_order_value",
+      "recency_days",
+      "avg_items",
+      "avg_installments",
+      "credit_share",
+      "boleto_share",
+      "review_coverage",
+      "delivery_coverage"
+    ],
+    "mean_outer_average_precision": 0.6536589292583435,
+    "mean_outer_roc_auc": 0.8611570907870251,
+    "mean_outer_lift_at_10_percent": 6.908640240600816,
+    "fold_thresholds": [
+      0.7008386723457872,
+      0.16216102755662548,
+      0.6918409381261467,
+      0.7229904907141487,
+      0.694238627210889
+    ],
+    "selected_models": [
+      "Histogram Gradient Boosting",
+      "Gradient Boosting",
+      "Histogram Gradient Boosting",
+      "Histogram Gradient Boosting",
+      "Histogram Gradient Boosting"
+    ],
+    "bootstrap_95_ci": {
+      "accuracy": {
+        "lower_95": 0.9844520555281818,
+        "upper_95": 0.9857537650763727
+      },
+      "average_precision": {
+        "lower_95": 0.6361792677446668,
+        "upper_95": 0.6705195286957809
+      },
+      "roc_auc": {
+        "lower_95": 0.8522109027809511,
+        "upper_95": 0.8696893088262508
+      },
+      "precision": {
+        "lower_95": 0.8528189509793569,
+        "upper_95": 0.8799938753289175
+      },
+      "recall": {
+        "lower_95": 0.5769189575151732,
+        "upper_95": 0.6135398072117101
+      },
+      "f1": {
+        "lower_95": 0.691981364796772,
+        "upper_95": 0.720806057532731
+      },
+      "lift_at_10_percent": {
+        "lower_95": 6.745571306015387,
+        "upper_95": 7.075892683693882
+      }
+    }
+  },
+  "production_model": {
+    "selected_model": "Histogram Gradient Boosting",
+    "full_data_oof_threshold": 0.7847300313230303,
+    "full_data_oof_f1_at_threshold": 0.7564982324802788,
+    "performance_claim_source": "nested cross-validation, not full-data OOF"
+  }
+}
